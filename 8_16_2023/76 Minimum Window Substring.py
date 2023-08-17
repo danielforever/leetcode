@@ -2,7 +2,7 @@
 
 # 20:42
 # 21:14
-# 00:
+# 00:32
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
         if(len(s) < len(t)):    return ""
