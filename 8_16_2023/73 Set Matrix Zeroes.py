@@ -1,3 +1,7 @@
+# https://leetcode.com/problems/set-matrix-zeroes/description/
+# 20:24
+# 20:31
+# 00:07
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
         """
