@@ -3,6 +3,7 @@
 # 22:10
 # 22:37
 # 00:27
+
 class Solution:
     def lengthOfLongestSubstringTwoDistinct(self, s: str) -> int:
         leftPointer = 0
