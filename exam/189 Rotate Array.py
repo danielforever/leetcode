@@ -3,7 +3,9 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+        # swap
         n = len(nums)
+        k = k % n
         startPoint = 0
         currentPoint = 0
         prevPoint = nums[startPoint]
@@ -14,10 +16,14 @@ class Solution:
             temp = nums[currentPoint]
             nums[currentPoint] = prevPoint
             prevPoint = temp
+            iterCount += 1
             
-            if(currentPoint == startPoint):
+            if(currentPoint == startPoint and iterCount < n):
                 currentPoint += 1
                 startPoint += 1
                 prevPoint = nums[startPoint]
+            
+
+
             
 
