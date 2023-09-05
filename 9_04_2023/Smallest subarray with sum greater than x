@@ -1,0 +1,48 @@
+# incorrect not passing all testcases
+
+class Solution:
+    def smallestSubWithSum(self, arr, n, x):
+        # Your code goes here 
+        
+        currSum= 0
+        minLen = n + 1
+
+        start = 0
+        end = 0
+        while (end < n):
+     
+
+            while (currSum <= x and end < n):
+                currSum += arr[end]
+                end += 1
+
+            while (currSum > x and start < n):
+     
+                if (end - start < minLen):
+                    minLen = end - start
+     
+                currSum -= arr[start]
+                start += 1
+     
+        return minLen
+
+
+#{ 
+ # Driver Code Starts
+def main():
+
+    T = int(input())
+
+    while(T > 0):
+        sz = [int(x) for x in input().strip().split()]
+        n, m = sz[0], sz[1]
+        a = [int(x) for x in input().strip().split()]
+        print(Solution().smallestSubWithSum(a, n, m))
+
+        T -= 1
+
+
+if __name__ == "__main__":
+    main()
+
+# } Driver Code Ends
