@@ -7,7 +7,6 @@ class Solution:
         v = sorted(v)
         n = len(v)
      
-        # check for even case
         if n % 2 != 0:
             return v[int(n/2)]
      
